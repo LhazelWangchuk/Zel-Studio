@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zel Studio</title>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script async src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"
+        onerror="console.error('Failed to load GLTFLoader from unpkg. Trying fallback...'); this.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.min.js'"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-outline"></div>
+    <div id="app" class="fade-in loaded">
+        <div id="progress-bar"></div>
+        <div id="backgroundBlob" class="background-blob"></div>
+        <header>
+            <div class="header-left">
+                <div class="location-indicator">THIMPHU | BHUTAN</div>
+                <div id="clock"></div>
+            </div>
+            <div class="header-center">
+                <span class="header-text default-text">ZEL CREATIVE STUDIO</span>
+                <span class="header-text hover-text">ZEL STUDIO</span>
+            </div>
+            <div class="header-right">
+                <a href="#home" class="uppercase">Home</a>
+                <a href="#about" class="uppercase">About</a>
+                <a href="#services" class="uppercase">Services</a>
+                <a href="#featured-work" class="uppercase">Featured Work</a>
+                <a href="#contact" class="uppercase">Contact</a>
+            </div>
+        </header>
+        <main id="home">
+            <div class="keywords-container">
+                <div class="keyword top-left">Dynamic</div>
+                <div class="keyword top-quarter">Logical Design</div>
+                <div class="keyword top-center">Interaction</div>
+                <div class="keyword top-three-quarter">Creative Dev</div>
+                <div class="keyword top-right">Creativity</div>
+                <div class="title-container">
+                    <h1 class="ZELSTUDIO-title">ZEL STUDIO</h1>
+                </div>
+                <div class="keyword bottom-left">Website</div>
+                <div class="keyword bottom-third">Unique</div>
+                <div class="keyword bottom-two-third">Experience Lab</div>
+                <div class="keyword bottom-right">Branding</div>
+            </div>
+            <div id="descriptionText" class="description-text">
+                ZELSTUDIO IS A CREATIVE AGENCY SPECIALIZING IN INTERACTION DESIGN, WEB DEVELOPMENT,
+                BRANDING, AND PLANNING. WE CRAFT INNOVATIVE DIGITAL EXPERIENCES BY COMBINING
+                CREATIVITY WITH CUTTING-EDGE TECHNOLOGY
+            </div>
+        </main>
+        <section id="about" class="page">
+            <div class="page-content">
+                <h2 class="about-title">About Us</h2>
+                <div class="about-content">
+                    <div class="about-grid">
+                        <p class="about-lead-bold">
+                            Hey there! I’m a passionate student at GCIT in Thimphu, Bhutan, chasing my dream of becoming a graphic designer.
+                        </p>
+                        <p class="about-body-bold">
+                            At Zel Studio, I channel my love for bold, vibrant designs into creating graphic posters that tell a story. Being based in the heart of Bhutan, I draw inspiration from our rich cultural heritage, blending traditional elements with modern aesthetics. I’m always experimenting with new ideas, playing with colors, and pushing the boundaries of creativity to craft designs that not only look good but also connect with people on a deeper level. Let’s create something amazing together!
+                        </p>
+                    </div>
+                </div>
+                <div class="visual-placeholder">
+                    <img src="images/about us.png" alt="Zel Studio Creative Vision">
+                </div>
+            </div>
+        </section>
+        <section id="services" class="page">
+            <div class="page-content">
+                <h2>OUR SERVICES</h2>
+                <p class="services-intro">
+                    Specializing in graphic poster design and creative branding.
+                </p>
+                <div class="services-container">
+                    <div class="service-card" data-service="interaction">
+                        <h3>Interaction Design</h3>
+                        <p>Crafting engaging and intuitive user experiences with seamless interactions.</p>
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-card" data-service="web">
+                        <h3>Web Development</h3>
+                        <p>Building responsive, high-performance websites tailored to your needs.</p>
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-card" data-service="branding">
+                        <h3>Branding & Identity</h3>
+                        <p>Creating bold, cohesive brand identities that resonate with your audience.</p>
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-card" data-service="creative">
+                        <h3>Creative Strategy</h3>
+                        <p>Developing innovative strategies to elevate your brand's digital presence.</p>
+                        <div class="service-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="featured-work" class="page">
+            <div class="page-content">
+                <h2>Featured Work</h2>
+                <div class="works-slider-container">
+                    <button class="slider-nav prev" aria-label="Previous project">❮</button>
+                    <div class="works-slider">
+                        <div class="project-card" data-project="cultural">
+                            <div class="project-image">
+                                <img src="images/energy image.png" alt="Cultural Festival Poster">
+                                <div class="project-overlay">
+                                    <h3 class="project-title">Contemporary Poster</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project="brand">
+                            <div class="project-image">
+                                <img src="images/poster4.png" alt="Brand Identity Poster">
+                                <div class="project-overlay">
+                                    <h3 class="project-title">Brand Identity Poster</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project="global">
+                            <div class="project-image">
+                                <img src="images/poster_1.png" alt="Global Campaign Poster">
+                                <div class="project-overlay">
+                                    <h3 class="project-title">Poster Competitions</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project="interactive">
+                            <div class="project-image">
+                                <img src="images/poster3.jpeg" alt="Interactive Design Poster">
+                                <div class="project-overlay">
+                                    <h3 class="project-title">Interactive Design Poster</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project="artisan">
+                            <div class="project-image">
+                                <img src="https://via.placeholder.com/600x400?text=Artisan+Collective+Poster" alt="Artisan Collective Poster">
+                                <div class="project-overlay">
+                                    <h3 class="project-title">Artisan Collective Poster</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project="virtual">
+                            <div class="project-image">
+                                <img src="https://via.placeholder.com/600x400?text=Virtual+Gallery+Poster" alt="Virtual Gallery Poster">
+                                <div class="project-overlay">
+                                    <h3 class="project-title">Virtual Gallery Poster</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-nav next" aria-label="Next project">❯</button>
+                    <div class="slider-progress">
+                        <span class="progress-indicator">1/6</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="page">
+            <div class="page-content">
+                <h2>CONTACT US</h2>
+                <a href="#home" class="contact-logo">
+                    <img src="./images/logo.svg" alt="Zel Studio Logo" class="contact-logo-img">
+                </a>
+                <p>Ready to start your next project? Reach out to us!</p>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p>Email: <a href="mailto:info@zelstudio.com">info@zelstudio.com</a></p>
+                        <div class="social-links">
+                            <a href="https://twitter.com" class="social-link" aria-label="Twitter">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com" class="social-link" aria-label="Instagram">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <circle cx="12" cy="12" r="4"/>
+                                    <circle cx="18" cy="6" r="1"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>PLEASE SCROLL</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Live Clock based on user location
+            function updateLiveClock() {
+                const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Asia/Thimphu';
+                const options = {
+                    timeZone: timeZone,
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: false
+                };
+                let liveTime;
+                try {
+                    liveTime = new Date().toLocaleTimeString("en-US", options);
+                } catch (e) {
+                    liveTime = new Date().toISOString().split("T")[1].split(".")[0];
+                }
+                const clockElement = document.getElementById("clock");
+                if (clockElement) {
+                    clockElement.innerText = liveTime;
+                }
+            }
+            updateLiveClock();
+            setInterval(updateLiveClock, 1000);
+
+            const appElement = document.getElementById("app");
+            if (appElement) appElement.classList.add("loaded");
+
+            if (window.THREE) {
+                const THREE = window.THREE;
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.domElement.style.pointerEvents = "none";
+                const blobContainer = document.getElementById("backgroundBlob");
+                if (blobContainer) {
+                    blobContainer.innerHTML = "";
+                    blobContainer.appendChild(renderer.domElement);
+                }
+
+                const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+                scene.add(ambientLight);
+                const pointLight = new THREE.PointLight(0x5ECBB8, 1);
+                pointLight.position.set(10, 10, 10);
+                scene.add(pointLight);
+
+                let model;
+                let modelLoaded = false;
+                if (typeof THREE.GLTFLoader !== 'undefined') {
+                    const loader = new THREE.GLTFLoader();
+                    const glbPath = './images/abstract_design.glb';
+                    loader.load(
+                        glbPath,
+                        (gltf) => {
+                            model = gltf.scene;
+                            scene.add(model);
+                            model.position.set(0, 0, 0);
+                            model.scale.set(1, 1, 1);
+                            modelLoaded = true;
+                        },
+                        (xhr) => {},
+                        (error) => {
+                            const geometry = new THREE.BoxGeometry(5, 5, 5);
+                            const material = new THREE.MeshPhongMaterial({
+                                color: 0x5ECBB8,
+                                wireframe: true,
+                                transparent: true,
+                                opacity: 0.8
+                            });
+                            model = new THREE.Mesh(geometry, material);
+                            scene.add(model);
+                            modelLoaded = true;
+                        }
+                    );
+                } else {
+                    const geometry = new THREE.BoxGeometry(5, 5, 5);
+                    const material = new THREE.MeshPhongMaterial({
+                        color: 0x5ECBB8,
+                        wireframe: true,
+                        transparent: true,
+                        opacity: 0.8
+                    });
+                    model = new THREE.Mesh(geometry, material);
+                    scene.add(model);
+                    modelLoaded = true;
+                }
+
+                camera.position.z = 15;
+
+                let mouseX = 0, mouseY = 0;
+                document.addEventListener('mousemove', (event) => {
+                    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+                });
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    if (model && modelLoaded) {
+                        model.rotation.x = mouseY * 0.5;
+                        model.rotation.y = mouseX * 0.5;
+                        model.position.set(0, 0, 0);
+                        camera.position.z = 15;
+                    }
+                    renderer.render(scene, camera);
+                }
+                animate();
+
+                const sections = document.querySelectorAll('main, .page');
+                const navLinks = document.querySelectorAll('header a');
+                let currentSection = 'home';
+
+                window.addEventListener('scroll', () => {
+                    const scrollPosition = window.scrollY;
+                    let activeSection = 'home';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.offsetHeight;
+                        if (scrollPosition >= sectionTop - window.innerHeight / 2 && scrollPosition < sectionTop + sectionHeight) {
+                            activeSection = section.getAttribute('id');
+                        }
+                    });
+                    if (activeSection !== currentSection) {
+                        currentSection = activeSection;
+                        const section = document.getElementById(currentSection);
+                        if (section) {
+                            section.classList.add('visible');
+                            navLinks.forEach(link => {
+                                if (link.getAttribute('href') === `#${currentSection}`) {
+                                    link.style.fontWeight = 'bold';
+                                    link.style.textDecoration = 'underline';
+                                } else {
+                                    link.style.fontWeight = 'normal';
+                                    link.style.textDecoration = 'none';
+                                }
+                            });
+                        }
+                    }
+
+                    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = (scrollPosition / scrollHeight) * 100;
+                    document.getElementById('progress-bar').style.width = `${progress}%`;
+                });
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+
+                const backgroundBlob = document.getElementById("backgroundBlob");
+                const sectionGradients = {
+                    'home': 'linear-gradient(135deg, #34495E 0%, #5ECBB8 100%)',
+                    'about': 'linear-gradient(135deg, #000000 0%, #34495E 100%)',
+                    'services': 'linear-gradient(135deg, #5ECBB8 0%, #34495E 100%)',
+                    'featured-work': 'linear-gradient(135deg, #5ECBB8 0%, #5ECBB8 100%)',
+                    'contact': 'linear-gradient(135deg, #34495E 0%, #000000 100%)'
+                };
+
+                const backgroundObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const sectionId = entry.target.getAttribute('id');
+                            backgroundBlob.style.background = sectionGradients[sectionId] || sectionGradients['home'];
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                sections.forEach(section => {
+                    backgroundObserver.observe(section);
+                });
+
+                backgroundBlob.style.background = sectionGradients['home'];
+            }
+
+            const animatedElements = document.querySelectorAll(
+                '.about-title, .about-lead-bold, .about-body-bold, .services-intro, .service-card, .project-card'
+            );
+
+            const animationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        element.classList.add('visible');
+                        if (element.classList.contains('project-card')) {
+                            const cards = Array.from(document.querySelectorAll('.project-card'));
+                            const index = cards.indexOf(element);
+                            element.style.animationDelay = `${index * 0.1}s`;
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            setTimeout(() => {
+                animatedElements.forEach(element => {
+                    animationObserver.observe(element);
+                });
+
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    const isVisible = (
+                        rect.top >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                    );
+                    if (isVisible) {
+                        element.classList.add('visible');
+                        if (element.classList.contains('project-card')) {
+                            const cards = Array.from(document.querySelectorAll('.project-card'));
+                            const index = cards.indexOf(element);
+                            element.style.animationDelay = `${index * 0.1}s`;
+                        }
+                    }
+                });
+            }, 100);
+
+            // Slider navigation, progress bar, keyboard navigation, and autoplay
+            const slider = document.querySelector('.works-slider');
+            const prevButton = document.querySelector('.slider-nav.prev');
+            const nextButton = document.querySelector('.slider-nav.next');
+            const progressBar = document.querySelector('.slider-progress');
+            const progressIndicator = document.querySelector('.progress-indicator');
+
+            if (slider && prevButton && nextButton && progressBar && progressIndicator) {
+                const cardWidth = () => {
+                    const card = slider.querySelector('.project-card');
+                    return card ? card.offsetWidth + parseFloat(getComputedStyle(card).marginRight) : 0;
+                };
+
+                const totalCards = slider.querySelectorAll('.project-card').length;
+
+                const updateProgress = () => {
+                    const maxScroll = slider.scrollWidth - slider.clientWidth;
+                    const progress = (slider.scrollLeft / maxScroll) * 100;
+                    progressBar.style.width = `${progress}%`;
+                    const currentCard = Math.round((slider.scrollLeft / maxScroll) * (totalCards - 1)) + 1;
+                    progressIndicator.textContent = `${currentCard}/${totalCards}`;
+                    // Update progress bar color
+                    const colorProgress = slider.scrollLeft / maxScroll;
+                    const startColor = [52, 73, 94]; // #34495E
+                    const endColor = [94, 203, 184]; // #5ECBB8
+                    const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * colorProgress);
+                    const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * colorProgress);
+                    const b = Math.round(startColor[2] + (endColor[2] - startColor[2]) * colorProgress);
+                    progressBar.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                    prevButton.disabled = slider.scrollLeft <= 0;
+                    nextButton.disabled = slider.scrollLeft >= maxScroll;
+                };
+
+                prevButton.addEventListener('click', () => {
+                    slider.scrollBy({ left: -cardWidth(), behavior: 'smooth' });
+                });
+
+                nextButton.addEventListener('click', () => {
+                    slider.scrollBy({ left: cardWidth(), behavior: 'smooth' });
+                });
+
+                slider.addEventListener('scroll', updateProgress);
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        slider.scrollBy({ left: -cardWidth(), behavior: 'smooth' });
+                    } else if (e.key === 'ArrowRight') {
+                        slider.scrollBy({ left: cardWidth(), behavior: 'smooth' });
+                    }
+                });
+
+                // Autoplay
+                let autoplayInterval = null;
+                const startAutoplay = () => {
+                    autoplayInterval = setInterval(() => {
+                        const maxScroll = slider.scrollWidth - slider.clientWidth;
+                        if (slider.scrollLeft >= maxScroll) {
+                            slider.scrollTo({ left: 0, behavior: 'smooth' }); // Reset to start
+                        } else {
+                            slider.scrollBy({ left: cardWidth(), behavior: 'smooth' });
+                        }
+                    }, 5000);
+                };
+                const stopAutoplay = () => {
+                    clearInterval(autoplayInterval);
+                    autoplayInterval = null;
+                };
+
+                slider.addEventListener('mouseenter', stopAutoplay);
+                slider.addEventListener('mouseleave', startAutoplay);
+                startAutoplay();
+
+                // Trigger initial progress and button state
+                updateProgress();
+            }
+
+            // Accessibility for progress bar
+            progressBar.setAttribute('aria-live', 'polite');
+            progressBar.setAttribute('role', 'progressbar');
+            progressBar.setAttribute('aria-valuemin', '0');
+            progressBar.setAttribute('aria-valuemax', '100');
+        });
+
+        const cursor = document.querySelector('.custom-cursor');
+        const outline = document.querySelector('.custom-cursor-outline');
+
+        let mouseX = 0, mouseY = 0;
+        let outlineX = 0, outlineY = 0;
+
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        function animate() {
+            outlineX += (mouseX - outlineX) * 0.1;
+            outlineY += (mouseY - outlineY) * 0.1;
+            outline.style.left = outlineX + 'px';
+            outline.style.top = outlineY + 'px';
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        const hoverTargets = document.querySelectorAll('a, button, .service-card, .project-card');
+
+        hoverTargets.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            });
+            el.addEventListener('mouseleave', () => {
+                outline.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        });
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const mouseX = e.clientX - centerX;
+                const mouseY = e.clientY - centerY;
+                const rotateX = (mouseY / rect.height) * -20;
+                const rotateY = (mouseX / rect.width) * 20;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            });
+        });
+    </script>
+</body>
+</html>
